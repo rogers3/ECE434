@@ -18,3 +18,16 @@ user enters one of the following instructions (not case sensitive):
     5. Clear/C- this will clear the grid (all '.' other then cursor) but NOT 
         reset the cursor
     6. Exit/E- this exits the program
+    
+# hw01 grading
+
+| Points      | Description |
+| ----------- | ----------- |
+|  8 | Etch-a-Sketch works
+|  2 | Code documented - Nice comment block at start of code
+|  2 | Includes #!/usr/bin/env python3 and chmod +x
+|  2 | install.sh included if needed
+|  2 | Used hw01 directory
+|  2 | ReadMe.md included
+|  2 | gitLearn and gitLearnFork
+| 20 | **Total**
