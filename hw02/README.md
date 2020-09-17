@@ -31,7 +31,7 @@ This is a folder for hw02. This is what is included:
 Oscilliscope Measurements:
 
 | Question      | Shell | Python | C w/o lseeek() | C w/ lseek | gpiod - python | gpiod - c |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 |  1: Max Voltage (V) | 3.361 V | 3.3545 | 3.3545 | 3.6363 | 3.2442 | 3.2167 |
 |  2: Period (ms) | 189.21 | 100.71 | 100.37 | 100.21 | 100.25 | 99.98 |
 |  3: How close to 100 ms? | far (89.21 ms) | close (.71 ms) | close (.37 ms) | close (.21 ms) | close (.25 ms) | very close (.02 ms) |
@@ -45,8 +45,9 @@ Oscilliscope Measurements:
 |  11: Shortest period (ms) | 43.44 ms | .1695 | .31195 | .17733 | .01734 | .0099187 |
 
 
-| Table 1 -  Shell |
+Table 1 -  Shell
 | Value set (ms) | Period (ms) | Processor usage (%) |
+| ----------- | ----------- | ----------- |
 | 100 | 189.21 | 20.60 |
 | 50 | 142.85 | 32.0 |
 | 10 | 62.5 | 70.8 |
@@ -55,8 +56,9 @@ Oscilliscope Measurements:
 | 0.5 | 43.45 | 98.1 |
 | 0.1 | 43.44 | 99.4 |
 
-| Table 2  - Python|
+Table 2  - Python
 | Value set (ms) | Period (ms) | Processor usage (%) |
+| ----------- | ----------- | ----------- |
 | 100 | 100.71 | 3.3 |
 | 50 | 50.49 | 3.9 |
 | 10 | 10.043 | 6.6 |
@@ -65,8 +67,9 @@ Oscilliscope Measurements:
 | 0.5 | 0.88789 | 55.0 |
 | 0.1 | 0.47009 | 78.3 |
 
-| Table 3 - C w/o lseeek() |
+Table 3 - C w/o lseeek()
 | Value set (ms) | Period (ms) | Processor usage |
+| ----------- | ----------- | ----------- |
 | 100 | 100.37 | 3.2 |
 | 50 | 50.040 | 3.3 |
 | 10 | 10.34 | 3.9 |
@@ -75,8 +78,9 @@ Oscilliscope Measurements:
 | 0.5 | .80859 | 11.0 |
 | 0.1 | .41252 | 25.9 |
 
-| Table 4 - C w/ lseek |
+Table 4 - C w/ lseek
 | Value set (ms) | Period (ms) | Processor usage |
+| ----------- | ----------- | ----------- |
 | 100 | 100.21 | 3.3 |
 | 50 | 50.0422 | 3.3 |
 | 10 | 10.3419 | 3.9 |
@@ -85,8 +89,9 @@ Oscilliscope Measurements:
 | 0.5 | .67688 | 9.8 |
 | 0.1 | .27541 | 24.1 |
 
-| Table 5 - gpiod - python |
+Table 5 - gpiod - python
 | Value set (ms) | Period (ms) | Processor usage |
+| ----------- | ----------- | ----------- |
 | 100 | 100.25 | 3.3 |
 | 50 | 50.24 | 3.3 |
 | 10 | 10.24 | 4.6 |
@@ -95,8 +100,9 @@ Oscilliscope Measurements:
 | 0.5 | .71155 | 18.2 |
 | 0.1 | .30658 | 47.4 |
 
-| Table 6 - gpiod - c |
+Table 6 - gpiod - c
 | Value set (ms) | Period (ms) | Processor usage |
+| ----------- | ----------- | ----------- |
 | 100 | 99.98 | 2.6 |
 | 50 | 49.999 | 3.2 |
 | 10 | 10.20 | 3.9 |
