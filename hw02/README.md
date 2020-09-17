@@ -3,10 +3,12 @@ CM: 473
 Date: 9/5/2020
 
 This is a folder for hw02. This is what is included:
+
     1. buttonLedIntterupt.py -> This is a python program that will turn an LED on when its
             button is pressed. I used P8_11, P8_12, P8_13, P8_14 as my buttons
             and P9_14, P9_12, P9_16, P9_18 as my leds. The buttons pin corresponded
             to its led pin accordingly.
+            
     2. etchASketchButtons.py -> This is an etch and sketch program. The user can specify 
             the width and height of the picture they desire. The picture will then be created. 
             A '.' represents an empty space on the picture. A '#' represents where the users 
@@ -24,6 +26,7 @@ This is a folder for hw02. This is what is included:
                 5. Clear/C (Terminal)- this will clear the grid (all '.' other then cursor) but NOT 
                     reset the cursor
                 6. Exit/E (Terminal)- this exits the program
+                
     3. toggleLed.Py -> This is a program that toggles an LED. It was used to measure a python scripts
             toggle speed on an oscilliscpoe
             
