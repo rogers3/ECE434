@@ -3,10 +3,12 @@ CM: 473
 Date: 9/5/2020
 
 This is a folder for hw02. This is what is included:
+
     1. buttonLedIntterupt.py -> This is a python program that will turn an LED on when its
             button is pressed. I used P8_11, P8_12, P8_13, P8_14 as my buttons
             and P9_14, P9_12, P9_16, P9_18 as my leds. The buttons pin corresponded
             to its led pin accordingly.
+            
     2. etchASketchButtons.py -> This is an etch and sketch program. The user can specify 
             the width and height of the picture they desire. The picture will then be created. 
             A '.' represents an empty space on the picture. A '#' represents where the users 
@@ -24,6 +26,7 @@ This is a folder for hw02. This is what is included:
                 5. Clear/C (Terminal)- this will clear the grid (all '.' other then cursor) but NOT 
                     reset the cursor
                 6. Exit/E (Terminal)- this exits the program
+                
     3. toggleLed.Py -> This is a program that toggles an LED. It was used to measure a python scripts
             toggle speed on an oscilliscpoe
             
@@ -35,7 +38,7 @@ Oscilliscope Measurements:
 |  1: Max Voltage (V) | 3.361 V | 3.3545 | 3.3545 | 3.6363 | 3.2442 | 3.2167 |
 |  2: Period (ms) | 189.21 | 100.71 | 100.37 | 100.21 | 100.25 | 99.98 |
 |  3: How close to 100 ms? | far (89.21 ms) | close (.71 ms) | close (.37 ms) | close (.21 ms) | close (.25 ms) | very close (.02 ms) |
-|  4: Why do they differ? | 
+|  4: Why do they differ? | You have to start the sysfs process over and over making it slower| Python is an interpretive language so it is a little slower | Without lseek the programs opens/close the file every toggle making it slower | With lseek the program does not open/close the file every toggle making it faster| gpiod is faster then other methods but python is slower then c b/c it is an interpretiv language |  gpiod is faster then other methods and c is faster then python | 
 |  5: Processor usage (at 10 ms period) | 20.6% | 6.1% | 5.2% | 5.3% | 3.9% | 4.0% |
 |  6: Table of period and processor usage | Table 1 | Table 2 | Table 3 | Table 4 | Table 5 | Table 6 |
 |  7: Stability of period | Bad (10 ms range) | good (.1 ms range) | good (.05 ms range) | very good (.01 ms range) | good (.2 ms range) | good (.15 ms range) |
