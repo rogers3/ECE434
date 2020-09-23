@@ -1,3 +1,19 @@
+# hw02 grading
+
+| Points      | Description |
+| ----------- | ----------- |
+|  2 | Buttons and LEDs 
+|  7 | Etch-a-Sketch works
+|    | Measuring a gpio pin on an Oscilloscope 
+|  4 | Questions answered
+|  3 | Table complete   *Very well done*
+|  2 | gpiod
+|    | Security      missing*
+|  0 | ssh port
+|  0 | iptables
+|  0 | fail2ban
+| 18 | **Total**
+
 Author: Christina Rogers (rogersc@rose-hulman.edu)
 CM: 473
 Date: 9/5/2020
@@ -38,7 +54,7 @@ Oscilliscope Measurements:
 |  1: Max Voltage (V) | 3.361 V | 3.3545 | 3.3545 | 3.6363 | 3.2442 | 3.2167 |
 |  2: Period (ms) | 189.21 | 100.71 | 100.37 | 100.21 | 100.25 | 99.98 |
 |  3: How close to 100 ms? | far (89.21 ms) | close (.71 ms) | close (.37 ms) | close (.21 ms) | close (.25 ms) | very close (.02 ms) |
-|  4: Why do they differ? | You have to start the sysfs process over and over making it slower| Python is an interpretive language so it is a little slower | Without lseek the programs opens/close the file every toggle making it slower | With lseek the program does not open/close the file every toggle making it faster| gpiod is faster then other methods but python is slower then c b/c it is an interpretiv language |  gpiod is faster then other methods and c is faster then python | 
+|  4: Why do they differ? | You have to start the sysfs process over and over making it slower| Python is an interpretive language so it is a little slower | Without lseek the programs opens/close the file every toggle making it slower | With lseek the program does not open/close the file every toggle making it faster| gpiod is faster than other methods but python is slower then c b/c it is an interpretiv language |  gpiod is faster then other methods and c is faster then python | 
 |  5: Processor usage (at 10 ms period) | 20.6% | 6.1% | 5.2% | 5.3% | 3.9% | 4.0% |
 |  6: Table of period and processor usage | Table 1 | Table 2 | Table 3 | Table 4 | Table 5 | Table 6 |
 |  7: Stability of period | Bad (10 ms range) | good (.1 ms range) | good (.05 ms range) | very good (.01 ms range) | good (.2 ms range) | good (.15 ms range) |
