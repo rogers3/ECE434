@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+
+    <head>
+        <title>Etch A Sketch</title>
+        <style>
+        .button {
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        .button1 {background-color: #4CAF50; margin: 4px 2px;} /* Green */
+        .button2 {background-color: #008CBA; margin: 4px 62px;} /* Blue */
+        .button3 {background-color: #008CBA; margin: 4px 50px;} /* Blue */
+        .button4 {background-color: #FF0000; margin: 4px 2px;} /* Red */
+        </style>
+    </head>
+    
+    <body>
+        <h2>Click a button to control etch a sketch</h2>
+        <h3> Movement </h3>
+            <div class="up">
+                <a href = "/ledRed/up" class="button button2">Up</a>
+            </div> 
+            <div class="left/right">
+                <a href = "/ledRed/left" class="button button1">Left</a>
+                <a href = "/ledRed/right" class="button button1">Right</a>
+            </div> 
+            <div class="down">
+                <a href = "/ledRed/down" class="button button3">Down</a>
+            </div> 
+        <br>
+        <h3> Control </h3>
+            <a href = "/ledRed/clear" class="button button4">Clear</a>
+    </body>
+</html>
