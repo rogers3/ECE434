@@ -12,17 +12,20 @@ What is included in this folder:
 |  toggleLED.py | This is a pthon program that toggles a GPIO port (LED) as fast as possible using mmap. 
 
 Embedded System Memory Map for Beagle Bone:
+
 ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/memory.jpg)
 
 GPIO Via MMAP:
 Write a C or python program that toggles a GPIO port as fast as it can. Measure the speed with an oscilloscope and compare with your previous measurements. Try toggling with no usleep. Is it faster?
+    The period using mmap was found to be 12.54 us which is faster then all previous measurements. Comenting out usleep did make the speed faster.
 
 Display Images:
+
   Boris
-  https://github.com/rogers3/ECE434/blob/master/hw04/boris.jpg
+  ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/boris.jpg)
   
   Boris rotated
-  https://github.com/rogers3/ECE434/blob/master/hw04/borisRotated.jpg
+  ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/borisRotated.jpg)
   
   Boris with name
-  https://github.com/rogers3/ECE434/blob/master/hw04/borisWithName.jpg
+  ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/borisWithName.jpg)
