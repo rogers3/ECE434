@@ -16,7 +16,9 @@ Embedded System Memory Map for Beagle Bone:
 ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/memory.jpg)
 
 GPIO Via MMAP:
+
 Write a C or python program that toggles a GPIO port as fast as it can. Measure the speed with an oscilloscope and compare with your previous measurements. Try toggling with no usleep. Is it faster?
+
     The period using mmap was found to be 12.54 us which is faster then all previous measurements. Comenting out usleep did make the speed faster.
 
 Display Images:
@@ -34,6 +36,5 @@ Display Images:
   ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/borisWithName.jpg)
 
 Extra:
-    Pygame
     
-      ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/borisWithName.jpg)
+    I was able to run pygame on the display using the scripts in exercises/displays/ili9341/fb/pygame. I ran both ./clock.py which displayed a moving clock and ./clockWeather.py which was similar to the clock but is also displayed weather information
