@@ -22,10 +22,18 @@ Write a C or python program that toggles a GPIO port as fast as it can. Measure 
 Display Images:
 
   Boris
+  
   ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/boris.jpg)
   
   Boris rotated
+  
   ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/borisRotated.jpg)
   
   Boris with name
+
   ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/borisWithName.jpg)
+
+Extra:
+    Pygame
+    
+      ![alt text](https://github.com/rogers3/ECE434/blob/master/hw04/borisWithName.jpg)
