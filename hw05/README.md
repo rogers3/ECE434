@@ -11,6 +11,7 @@ What is included in this folder:
 |  app | This folder contains the files for the make excercise
 |  gpio | This folder contains the files for the gpio_test part of the kernal modules excercise
 |  led | This folder contains the files for the led part of the kernal modules excercise
+|  pictures | This folder contains the pictures used in this README
 
 
 Project: I added some project ideas to the Project page and marked the ones I am intrested in
