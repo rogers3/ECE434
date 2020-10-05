@@ -21,11 +21,13 @@ Make: The Makefile as well as app.c are in the app folder.
 
 
 Installing the Kernal Source:
+
     ![alt text](https://github.com/rogers3/ECE434/blob/master/hw05/pictures/boneOutput.JPG)
     ![alt text](https://github.com/rogers3/ECE434/blob/master/hw05/pictures/hostOutput.JPG)
 
 
 Cross-Compiling:
+
     ![alt text](https://github.com/rogers3/ECE434/blob/master/hw05/pictures/uname.JPG)
     
 
