@@ -21,11 +21,12 @@ Make: The Makefile as well as app.c are in the app folder.
 
 
 Installing the Kernal Source:
-    ![alt text](addr)
+    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw05/pictures/boneOutput.JPG)
+    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw05/pictures/hostOutput.JPG)
 
 
 Cross-Compiling:
-    ![alt text](addr)
+    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw05/pictures/uname.JPG)
     
 
 Kernel Modules: The Makefile for gpio_test as well as gpio_test.c are in the gpio folder. The Makefile for led as well as led.c are in the led folder.
