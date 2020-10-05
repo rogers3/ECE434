@@ -1,3 +1,10 @@
+// #//////////////////////////////////////
+// # Author: Christina Rogers
+// # CM: 473
+// # Date: 10/3/2020
+// # Description: Edited kernal module so that two LED outputs flash at different rates.
+// #//////////////////////////////////////
+
 /**
  * @file   led.c
  * @author Derek Molloy

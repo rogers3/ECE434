@@ -1,3 +1,11 @@
+// #//////////////////////////////////////
+// # Author: Christina Rogers
+// # CM: 473
+// # Date: 10/3/2020
+// # Description: Edited kernal module so that two button inputs trigger two
+//#      LED outputs.
+// #//////////////////////////////////////
+
 /**
  * @file   gpio_test.c
  * @author Derek Molloy
