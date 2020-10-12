@@ -5,6 +5,7 @@ CM: 473
 Date: 10/5/2020
 
 ## Project: ##
+I added some project ideas to the Project page and marked the ones I am intrested in
 
 ## Watch: ##
 Answers to questions:
