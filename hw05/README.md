@@ -14,21 +14,24 @@ What is included in this folder:
 |  pictures | This folder contains the pictures used in this README
 
 
-Project: I added some project ideas to the Project page and marked the ones I am intrested in
+## Project: ##
+I added some project ideas to the Project page and marked the ones I am intrested in
 
 
-Make: The Makefile as well as app.c are in the app folder.
+## Make: ##
+The Makefile as well as app.c are in the app folder.
 
 
-Installing the Kernal Source:
+## Installing the Kernal Source: ##
+
+   ![alt text](https://github.com/rogers3/ECE434/blob/master/hw05/pictures/uname.JPG)
+
+
+## Cross-Compiling: ##
 
    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw05/pictures/boneOutput.JPG)
    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw05/pictures/hostOutput.JPG)
-
-
-Cross-Compiling:
-
-   ![alt text](https://github.com/rogers3/ECE434/blob/master/hw05/pictures/uname.JPG)
     
 
-Kernel Modules: The Makefile for gpio_test as well as gpio_test.c are in the gpio folder. The Makefile for led as well as led.c are in the led folder.
+## Kernel Modules: ##
+The Makefile for gpio_test as well as gpio_test.c are in the gpio folder. The Makefile for led as well as led.c are in the led folder.
