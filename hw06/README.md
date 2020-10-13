@@ -22,3 +22,9 @@ Answers to questions:
 11.	The external event can start sooner in figure 4 because with the RT patch, IRQ threads are forced. This means there is only a little code that is executed in the heart interrupt context. This code just wakes up the associated handle thread that executes the IRQ handler. Since running in threads, threads can be preempted.
 
 ## PREEMPT_RT: ##
+
+No Load:
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw06/ResponseTimeNoLoad.JPG)
+
+With Load:
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw06/ResponseTimeWithLoad.JPG_
