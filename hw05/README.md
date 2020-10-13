@@ -1,3 +1,17 @@
+# hw05 grading
+
+| Points      | Description |
+| ----------- | ----------- |
+|  2 | Project - *Nice project ideas.  Pet watcher seems like the easiest.* 
+|  2 | Makefile
+|  4 | Kernel Source
+|  2 | Cross-Compiling
+|  8 | Kernel Modules: hello, ebbchar, gpio_test, led
+|  1 | Extras
+| 19 | **Total**
+
+*My comments are in italics. --may*
+
 Author: Christina Rogers (rogersc@rose-hulman.edu)
 CM: 473
 Date: 10/5/2020
