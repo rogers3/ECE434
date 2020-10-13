@@ -24,7 +24,10 @@ Answers to questions:
 ## PREEMPT_RT: ##
 
 No Load:
+
 ![alt text](https://github.com/rogers3/ECE434/blob/master/hw06/ResponseTimeNoLoad.JPG)
 
+
 With Load:
-![alt text](https://github.com/rogers3/ECE434/blob/master/hw06/ResponseTimeWithLoad.JPG_
+
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw06/ResponseTimeWithLoad.JPG)
