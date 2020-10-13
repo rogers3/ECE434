@@ -4,6 +4,13 @@ CM: 473
 
 Date: 10/5/2020
 
+What is included:
+
+| Name      | Description |
+| ----------- | ----------- |
+|  ResponseTimeNoLoad.JPG | Picture of Cyclic test with no load.
+|  ResponseTimeWithLoad.JPG | Picture of Cyclic test with a heavy load.
+
 ## Project: ##
 I added some project ideas to the Project page and marked the ones I am intrested in
 
@@ -31,3 +38,8 @@ No Load:
 With Load:
 
 ![alt text](https://github.com/rogers3/ECE434/blob/master/hw06/ResponseTimeWithLoad.JPG)
+
+
+Comment:
+
+The RT kernel does have bounded latency. The load begin used are tasks. I compiled a make file and then cleaned it repeatedly to make tasks.
