@@ -42,4 +42,4 @@ With Load:
 
 Comment:
 
-The RT kernel does have shorter and bounded latency which apperears to be around 100 microseconds. This is hown by the fact both with and without a load the RT-kernel had. I loaded the kernels by compiling a make file and then cleaning it repeatedly to make tasks.
+The RT kernel does have shorter and bounded latency which apperears to be around 100 microseconds. I loaded the kernels by compiling a make file and then cleaning it repeatedly to make tasks.
