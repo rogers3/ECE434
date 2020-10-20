@@ -4,7 +4,15 @@ CM: 473
 
 Date: 10/5/2020
 
+What is included:
+
+| Name      | Description |
+| ----------- | ----------- |
+|  ResponseTimeNoLoad.JPG | Picture of Cyclic test with no load.
+|  ResponseTimeWithLoad.JPG | Picture of Cyclic test with a heavy load.
+
 ## Project: ##
+I added some project ideas to the Project page and marked the ones I am intrested in
 
 ## Watch: ##
 Answers to questions:
@@ -21,3 +29,17 @@ Answers to questions:
 11.	The external event can start sooner in figure 4 because with the RT patch, IRQ threads are forced. This means there is only a little code that is executed in the heart interrupt context. This code just wakes up the associated handle thread that executes the IRQ handler. Since running in threads, threads can be preempted.
 
 ## PREEMPT_RT: ##
+
+No Load:
+
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw06/ResponseTimeNoLoad.JPG)
+
+
+With Load:
+
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw06/ResponseTimeWithLoad.JPG)
+
+
+Comment:
+
+The RT kernel does have shorter and bounded latency which apperears to be around 100 microseconds. I loaded the kernels by compiling a make file and then cleaning it repeatedly to make tasks.

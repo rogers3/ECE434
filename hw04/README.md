@@ -1,3 +1,19 @@
+# hw04 grading
+
+| Points      | Description |
+| ----------- | ----------- |
+|  2 | Memory map 
+|  4 | mmap()
+|  4 | i2c via Kernel
+|  4 | Etch-a-Sketch via flask
+|  4 | LCD display
+|  2 | Extras
+| 20 | **Total**
+
+*Looks good*
+
+*My comments are in italics. --may*
+
 Author: Christina Rogers (rogersc@rose-hulman.edu)
 CM: 473
 Date: 10/2/2020
@@ -19,7 +35,7 @@ GPIO Via MMAP:
 
 Write a C or python program that toggles a GPIO port as fast as it can. Measure the speed with an oscilloscope and compare with your previous measurements. Try toggling with no usleep. Is it faster?
 
-    The period using mmap was found to be 12.54 us which is faster then all previous measurements. Comenting out usleep did make the speed faster.
+    The period using mmap was found to be 12.54 us which is faster then all previous measurements. Commenting out usleep did make the speed faster.
 
 Display Images:
 
