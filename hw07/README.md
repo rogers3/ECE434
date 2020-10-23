@@ -1,3 +1,16 @@
+# hw07 grading
+
+| Points      | Description |
+| ----------- | ----------- |
+|  2 | Project Template
+|  0 | | Names - *missing*
+|  2 | | Executive Summary
+| 10 | Blynk - TMP101
+|  4 | Blynk - Etch-a-sketch - extra
+| 18 | **Total**
+
+*My comments are in italics. --may*
+
 Author: Christina Rogers (rogersc@rose-hulman.edu)
 
 CM: 473
@@ -16,6 +29,8 @@ What is included:
 ## Project: ##
 I created a wikipedia page for my project and partially filled out executive summary. 
 Link: https://en.wikipedia.org/wiki/User_talk:Rogerscj37
+
+*Could you put this on the eLinux site?  I'd like like listed with the others*
 
 ## Blynk: ##
 I installed Blynk and ran the example program on the Bone. The program ran was leds.py and it controlls a virtual LED with a button connected to the bone. Note it requires setup.sh. 
