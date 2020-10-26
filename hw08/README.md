@@ -1,14 +1,3 @@
-| Points      | Description |
-| ----------- | ----------- |
-|  2 | Project Template
-|  0 | | Names - *missing*
-|  2 | | Executive Summary
-| 10 | Blynk - TMP101
-|  4 | Blynk - Etch-a-sketch - extra
-| 18 | **Total**
-
-*My comments are in italics. --may*
-
 Author: Christina Rogers (rogersc@rose-hulman.edu)
 
 CM: 473
@@ -25,11 +14,18 @@ What is included:
 
 
 ## Blinking an LED: ##
-What make command will start your PRU code running? What will stop it?
 This command made my PRU code run: bone$ make TARGET=led.pru0
+
+This command made it stoP: bone$______                     FILL THIS IN
+
+The fastest the pin can toggle is ____. jitter? + stabiliy?                    FILL THIS IN
 
 
 ## PWM Generator: ##
+[___ ]                                      FILL THIS IN
+Waveform Capture
+
+Comment on how stable the waveform is. What’s the Std Dev? Is there jitter                    FILL THIS IN
  
 
 ## Controlling PWM Frequency: ##
