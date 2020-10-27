@@ -18,19 +18,36 @@ This command made my PRU code run:
 
     bone$ make TARGET=hello.pru0 
 
-This command made it stoP: 
+This command made it stop: 
     
     bone$ make TARGET=hello.pru0 stop
 
-The fastest the pin can toggle is ____. jitter? + stabiliy?                    FILL THIS IN
+How fast can you toggle the pin?:
 
+
+    ... Hz
+
+Is there jitter?:
+
+    BLA
+
+Is it stable?:
+
+    BLA
+    
 
 ## PWM Generator: ##
 [___ ]                                      FILL THIS IN
 Waveform Capture
 
-Comment on how stable the waveform is. What’s the Std Dev? Is there jitter                    FILL THIS IN
- 
+What’s the Std Dev?:
+
+    BLA
+    
+Is there jitter?:
+
+    BLA
+
 
 ## Controlling PWM Frequency: ##
 What output pins are being driven?         
@@ -45,19 +62,23 @@ What’s the highest frequency you can get with four channels?
 
 Is there jitter? 
 
-Run the pwm-test.c program to change the on and off times. Does it work?    Yes it does work the output is included below
+Run the pwm-test.c program to change the on and off times. Does it work?
 
-    Servo tester
-    Using /dev/mem.
-    countOn: 1, countOff: 19, count: 20
-    countOn: 2, countOff: 18, count: 20
-    countOn: 3, countOff: 17, count: 20
-    countOn: 4, countOff: 16, count: 20
-    munmap succeeded
+    Yes, the program does work the code it outputs is included below:
+        Servo tester
+        Using /dev/mem.
+        countOn: 1, countOff: 19, count: 20
+        countOn: 2, countOff: 18, count: 20
+        countOn: 3, countOff: 17, count: 20
+        countOn: 4, countOff: 16, count: 20
+        munmap succeeded
 
 
 ## Reading an Input at Regular Intervals: ##
 
+How fast the code can transfer the input to the output:
+
+    BLA
 
 ## Analog Wave Genorator: ##
 
