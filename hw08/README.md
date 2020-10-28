@@ -24,16 +24,11 @@ This command made it stop:
 
 How fast can you toggle the pin?:
 
+    //
 
-    ... Hz
+Is there jitter? Is it stable?:
 
-Is there jitter?:
-
-    BLA
-
-Is it stable?:
-
-    BLA
+    The signal is less stable and there is some jitter at a high frquency.
     
 
 ## PWM Generator: ##
@@ -42,11 +37,11 @@ Waveform Capture
 
 What’s the Std Dev?:
 
-    BLA
+    //
     
 Is there jitter?:
 
-    BLA
+    //
 
 
 ## Controlling PWM Frequency: ##
@@ -59,8 +54,12 @@ What bits of __R30 are being used?
     0 (P9_31), 1(P9_30), 2(P9_29), 3(P9_28)
 
 What’s the highest frequency you can get with four channels?
+        
+        //
 
 Is there jitter? 
+
+        //
 
 Run the pwm-test.c program to change the on and off times. Does it work?
 
@@ -78,7 +77,7 @@ Run the pwm-test.c program to change the on and off times. Does it work?
 
 How fast the code can transfer the input to the output:
 
-    BLA
+    The highest frquenct I could obtain was 6.0846 HZ. The reason this number is lower than the others is I am slow when pressing the button compared to a computer toggling.
 
 ## Analog Wave Genorator: ##
 
