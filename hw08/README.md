@@ -8,7 +8,13 @@ What is included:
 
 | Name      | Description |
 | ----------- | ----------- |
-| 
+| analogWaveGen.pru0.c | PRU code to create an analog sine wave
+| led.pru0.c | PRU code to toggle an LED through ARM GPIO
+| pwmFreqTest.c | This file was used to set the different frequencies in pwmFrequency.pru0.c
+| pwmFrequency.pru0.c | PRU code to toggle four LEDs at different frequencies through PRU GPIO
+| pwmGenerator.pru0.c | PRU code to toggle an LED through PRU GPIO
+| readInput.pru0.c | PRU code to read an input and write it to an output
+| setup.sh | This is the setup file for this folder
 
 ## Summary of Results Table: ##
 
@@ -37,13 +43,15 @@ Highest frequency:
 
 Is there jitter? Is it stable?:
 
-    The signal is slighyly unstable and there is a some jitter at a high frquency.
-    
+    The signal is slighyly unstable and there is some jitter at a high frquency.
+
+Waveform:
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/led.png.png)
 
 ## PWM Generator: ##
 What’s the Std Dev?:
 
-    9.746 K
+    9.746 KHz
     
 Highest frequency:
 
@@ -53,6 +61,12 @@ Is there jitter? Is it stable?:
 
     The signal is still unstable and there is jitter.
 
+Waveform at highest frequency:
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/pwmGenerator_MaxFreq.png)
+
+
+Waveform at 50 MHz:
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/pwmGenerator_50MHz.png
 
 ## Controlling PWM Frequency: ##
 What output pins are being driven?         
@@ -67,9 +81,9 @@ Highest frequency:
 
     326.8 kHz
 
-Is there jitter? Is it stable?:
+Is there jitter?:
 
-    The signal is the most stable up until this point, but it is still unstavle with a little jitter. It may be a more stable signal because the frequency is lower then that of the others.
+    Yes, there is jitter.
 
 Run the pwm-test.c program to change the on and off times. Does it work?
 
@@ -82,6 +96,9 @@ Run the pwm-test.c program to change the on and off times. Does it work?
         countOn: 4, countOff: 16, count: 20
         munmap succeeded
 
+Waveform at four signals:
+![alt text]https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/pwmFrequency.png)
+
 
 ## Reading an Input at Regular Intervals: ##
 
@@ -90,4 +107,7 @@ How fast the code can transfer the input to the output:
     The highest frquenct I could obtain was 6.0846 HZ. The reason this number is lower than the others is I am slow when pressing the button compared to a computer toggling.
 
 ## Analog Wave Genorator: ##
+
+Waveform of sine wave:
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/sineWave.png)
 
