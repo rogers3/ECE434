@@ -10,6 +10,15 @@ What is included:
 | ----------- | ----------- |
 | 
 
+## Summary of Results Table: ##
+
+| File      | Frequency |
+| ----------- | ----------- | 
+| led.pru0.c | 12.51 MHz
+| pwmGenerator.pru0.c | 66.65 MHz
+| pwnFrequency.pru0.c |  326.8 kHz
+| readInput.pru0.c | 6.0846 HZ
+
 ## Project: ##
 
 
@@ -22,26 +31,27 @@ This command made it stop:
     
     bone$ make TARGET=hello.pru0 stop
 
-How fast can you toggle the pin?:
+Highest frequency:
 
-    //
+    12.51 MHz -> I obtained this value when __delay_cycles was set to 0
 
 Is there jitter? Is it stable?:
 
-    The signal is less stable and there is some jitter at a high frquency.
+    The signal is slighyly unstable and there is a some jitter at a high frquency.
     
 
 ## PWM Generator: ##
-[___ ]                                      FILL THIS IN
-Waveform Capture
-
 What’s the Std Dev?:
 
-    //
+    9.746 K
     
-Is there jitter?:
+Highest frequency:
 
-    //
+    66.65 MHz -> I obtained this value when __delay_cycles was set to 0
+
+Is there jitter? Is it stable?:
+
+    The signal is still unstable and there is jitter.
 
 
 ## Controlling PWM Frequency: ##
@@ -53,13 +63,13 @@ What bits of __R30 are being used?
     
     0 (P9_31), 1(P9_30), 2(P9_29), 3(P9_28)
 
-What’s the highest frequency you can get with four channels?
-        
-        //
+Highest frequency:
 
-Is there jitter? 
+    326.8 kHz
 
-        //
+Is there jitter? Is it stable?:
+
+    The signal is the most stable up until this point, but it is still unstavle with a little jitter. It may be a more stable signal because the frequency is lower then that of the others.
 
 Run the pwm-test.c program to change the on and off times. Does it work?
 
