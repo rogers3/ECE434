@@ -15,6 +15,7 @@ What is included:
 | pwmGenerator.pru0.c | PRU code to toggle an LED through PRU GPIO
 | readInput.pru0.c | PRU code to read an input and write it to an output
 | setup.sh | This is the setup file for this folder
+| pictures | Folder containing pictures relevent to hw08
 
 ## Summary of Results Table: ##
 
@@ -26,7 +27,8 @@ What is included:
 | readInput.pru0.c | 6.0846 HZ
 
 ## Project: ##
-
+(I plan on moving this to the eLinux page, but I don't know how)
+I created a wikipedia page for my project and partially filled out executive summary. Link: https://en.wikipedia.org/wiki/User_talk:Rogerscj37
 
 ## Blinking an LED: ##
 This command made my PRU code run: 
@@ -66,7 +68,7 @@ Waveform at highest frequency:
 
 
 Waveform at 50 MHz:
-![alt text](https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/pwmGenerator_50MHz.png
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/pwmGenerator_50MHz.png)
 
 ## Controlling PWM Frequency: ##
 What output pins are being driven?         
@@ -97,7 +99,7 @@ Run the pwm-test.c program to change the on and off times. Does it work?
         munmap succeeded
 
 Waveform at four signals:
-![alt text]https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/pwmFrequency.png)
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/pwmFrequency.png)
 
 
 ## Reading an Input at Regular Intervals: ##
