@@ -1,3 +1,18 @@
+# hw08 grading
+
+| Points      | Description |
+| ----------- | ----------- |
+| 14 | PRU
+|  2 | Controlling the PWM Frequency - optional
+|  2 | Reading an Input at Regular Intervals - optional
+|  0 | Analog Wave Generator - optional
+| 18 | **Total**
+
+*My comments are in italics. --may*
+
+*Well documented.  Nice tables.*
+
+
 Author: Christina Rogers (rogersc@rose-hulman.edu)
 
 CM: 473
@@ -62,6 +77,8 @@ Highest frequency:
 Is there jitter? Is it stable?:
 
     The signal is still unstable and there is jitter.
+    
+*That's odd, there shouldn't be any gitter.*
 
 Waveform at highest frequency:
 ![alt text](https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/pwmGenerator_MaxFreq.png)
@@ -113,3 +130,4 @@ How fast the code can transfer the input to the output:
 Waveform of sine wave:
 ![alt text](https://github.com/rogers3/ECE434/blob/master/hw08/picrutes/sineWave.png)
 
+*That doesn't look like a pure sine wave.*
