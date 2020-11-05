@@ -57,13 +57,13 @@ to add more rows. I did add more rows and data continued to record.
 ThinkSpeak link: https://thingspeak.com/channels/1220275
 
 
-Running the temp.py script logs the data from two TMP101 sensors into ThnkSpeak. I made the
+Running the temp.py script logs the data from two TMP101 sensors into ThinkSpeak. I made the
 ThnkSpeak channel public so it can be opened from the link above. The channel has two
 plots. They plot temperature in °C vs time for each of the two TMP101 sensors.
 
 
-    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/ThinkSpeakPlots.JPG)
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/ThinkSpeakPlots.JPG)
     
     
-I ran this program for around an hour collecting data once every minute. The plot looked normal it just had
-more points.
+I ran this program for around an hour collecting data once every minute. Nothin intreseting ocoured. The 
+plot just had more data points.
