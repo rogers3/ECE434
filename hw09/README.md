@@ -10,9 +10,9 @@ What is included:
 | ----------- | ----------- |
 | pictures | Folder containing pictures relevent to hw
 | credentials.json | Credentials to log to google sheets
-| demo.py | Script that logs temperatures of two TMP101 sesnors vs time once every second.
+| demo.py | Google sheets- Script that logs temperatures of two TMP101 sesnors to google sheets once every second.
 | setup.sh | This is the setup file for this folder
-| temp.py" Script that logs temperatures of two TMP101 sesnors and time once every minute.
+| temp.py" | ThinkSpeak- Script that logs temperatures of two TMP101 sesnors to ThinkSpeak once every minute.
 | token.pickle | Credentials for logging to google sheets
 
 
@@ -24,7 +24,7 @@ Project Link:
 Project Time :
 
 
-    ![alt text]()
+    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/ProjectTimeline.JPG)
 
 
 ## Logging in Sheets: ##
@@ -40,13 +40,13 @@ records the temp in °F. Data is recorded once a second, but this can be changed
 variable PERIOD in demo.py. The credential file for logging to google sheets is credentials.json. 
 
 
-    ![alt text]()
+    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/tempTrackingTable.JPG)
 
 
 Next a plot was made of the temperature over time. 
 
 
-    ![alt text]()
+    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/tempTrackingGraph.JPG)
 
 
 I ran this program for a long period of time and got 1370 points of data. There was nothing
