@@ -24,7 +24,7 @@ Project Link:
 Project Time :
 
 
-    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/ProjectTimeline.JPG)
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/ProjectTimeline.JPG)
 
 
 ## Logging in Sheets: ##
@@ -40,13 +40,13 @@ records the temp in °F. Data is recorded once a second, but this can be changed
 variable PERIOD in demo.py. The credential file for logging to google sheets is credentials.json. 
 
 
-    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/tempTrackingTable.JPG)
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/tempTrackingTable.JPG)
 
 
 Next a plot was made of the temperature over time. 
 
 
-    ![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/tempTrackingGraph.JPG)
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/tempTrackingGraph.JPG)
 
 
 I ran this program for a long period of time and got 1370 points of data. There was nothing
