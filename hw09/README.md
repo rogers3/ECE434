@@ -1,3 +1,17 @@
+# hw09 grading
+
+| Points      | Description |
+| ----------- | ----------- |
+|  5 | Project Timeline
+| 10 | Logging to Sheets
+|  3 | Logging to ThingSpeak - optional
+|  2 | Extras
+| 20 | **Total**
+
+*My comments are in italics. --may*
+
+*Very well done!*
+
 Author: Christina Rogers (rogersc@rose-hulman.edu)
 
 CM: 473
@@ -23,6 +37,7 @@ Project Time line:
 
 ![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/ProjectTimeline.JPG)
 
+*Nice timeline*
 
 ## Logging in Sheets: ##
 
