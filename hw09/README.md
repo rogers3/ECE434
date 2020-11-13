@@ -1,3 +1,17 @@
+# hw09 grading
+
+| Points      | Description |
+| ----------- | ----------- |
+|  5 | Project Timeline
+| 10 | Logging to Sheets
+|  3 | Logging to ThingSpeak - optional
+|  2 | Extras
+| 20 | **Total**
+
+*My comments are in italics. --may*
+
+*Very well done!*
+
 Author: Christina Rogers (rogersc@rose-hulman.edu)
 
 CM: 473
@@ -10,22 +24,20 @@ What is included:
 | ----------- | ----------- |
 | pictures | Folder containing pictures relevent to hw
 | credentials.json | Credentials to log to google sheets
-| demo.py | Script that logs temperatures of two TMP101 sesnors vs time once every second.
+| demo.py | Google sheets- Script that logs temperatures of two TMP101 sesnors to google sheets once every second.
 | setup.sh | This is the setup file for this folder
-| temp.py" Script that logs temperatures of two TMP101 sesnors and time once every minute.
+| temp.py" | ThinkSpeak- Script that logs temperatures of two TMP101 sesnors to ThinkSpeak once every minute.
 | token.pickle | Credentials for logging to google sheets
 
 
 ## Project: ##
 
-Project Link: 
+Project Time line:
 
 
-Project Time :
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/ProjectTimeline.JPG)
 
-
-    ![alt text]()
-
+*Nice timeline*
 
 ## Logging in Sheets: ##
 
@@ -40,13 +52,13 @@ records the temp in °F. Data is recorded once a second, but this can be changed
 variable PERIOD in demo.py. The credential file for logging to google sheets is credentials.json. 
 
 
-    ![alt text]()
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/tempTrackingTable.JPG)
 
 
 Next a plot was made of the temperature over time. 
 
 
-    ![alt text]()
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/tempTrackingGraph.JPG)
 
 
 I ran this program for a long period of time and got 1370 points of data. There was nothing
@@ -60,12 +72,13 @@ to add more rows. I did add more rows and data continued to record.
 ThinkSpeak link: https://thingspeak.com/channels/1220275
 
 
-Running the temp.py script logs the data from two TMP101 sensors into ThnkSpeak. I made the
+Running the temp.py script logs the data from two TMP101 sensors into ThinkSpeak. I made the
 ThnkSpeak channel public so it can be opened from the link above. The channel has two
 plots. They plot temperature in °C vs time for each of the two TMP101 sensors.
 
 
-    ![alt text]()
+![alt text](https://github.com/rogers3/ECE434/blob/master/hw09/pictures/ThinkSpeakPlots.JPG)
     
     
-I ran this program for around ___ ...
+I ran this program for around an hour collecting data once every minute. Nothin intreseting ocoured. The 
+plot just had more data points.
