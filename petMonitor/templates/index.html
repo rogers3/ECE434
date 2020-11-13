@@ -4,16 +4,15 @@
         <title>Pet Monitor</title>
         <style>
         .button {
-          border: none;
-          color: white;
-          padding: 10px 25px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
+          position: absolute;
           cursor: pointer;
-          background-color: green; 
-          margin: 4px 2px;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 30px;
+          bottom: 4px;
+          background-color: white;
+          border-radius: 50%;
         }
         .header {
           padding: 30px;
@@ -21,6 +20,20 @@
           background: #1abc9c;
           color: white;
           font-size: 30px;
+        }
+        .buttonBackground {
+          border: none;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          cursor: pointer;
+          background-color: #ccc; 
+          margin: 4px 2px;
+          border-radius: 34px;
+          width: 60px;
+          height: 34px;
         }
         
         /* Control the left side */
@@ -46,7 +59,6 @@
         
         .rows{
           padding: 7px 32px;
-          
         }
         
         /* The switch - the box around the slider */
@@ -57,28 +69,6 @@
           height: 34px;
         }
         
-        /* Hide default HTML checkbox */
-        .switch input {
-          opacity: 0;
-          width: 0;
-          height: 0;
-        }
-        
-        /* The slider */
-        .slider {
-          position: absolute;
-          cursor: pointer;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: #ccc;
-          -webkit-transition: .4s;
-          transition: .4s;
-          border-radius: 34px;
-        }
-        
-        /* The slider */
         .switchOnBackground {
           position: absolute;
           cursor: pointer;
@@ -86,11 +76,10 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background-color: #ccc;
-          -webkit-transition: .4s;
-          transition: .4s;
           border-radius: 34px;
           background-color: #2196F3;
+          border-style: none;
+          width: 60px;
         }
         
         .switchOnCircle {
@@ -102,22 +91,22 @@
           left: 30px;
           bottom: 4px;
           background-color: white;
-          -webkit-transition: .4s;
-          transition: .4s;
           border-radius: 50%;
+          border-style: none;
         }
         
         .switchOffBackground {
           position: absolute;
+          display: inline-block;
           cursor: pointer;
+          width: 60px;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
           background-color: #ccc;
-          -webkit-transition: .4s;
-          transition: .4s;
           border-radius: 34px;
+          border-style: none;
         }
         
         .switchOffCircle {
@@ -129,39 +118,14 @@
           left: 4px;
           bottom: 4px;
           background-color: white;
-          -webkit-transition: .4s;
-          transition: .4s;
           border-radius: 50%;
+          border-style: none;
         }
         
-        .slider:before {
-          position: absolute;
-          content: "";
-          height: 26px;
-          width: 26px;
-          left: 4px;
-          bottom: 4px;
-          background-color: white;
-          -webkit-transition: .4s;
-          transition: .4s;
-        }
-        
-        a:checked + .slider {
-          background-color: #2196F3;
-        }
-        
-        a:focus + .slider {
-          box-shadow: 0 0 1px #2196F3;
-        }
-        
-        a:checked + .slider:before {
-          -webkit-transform: translateX(26px);
-          -ms-transform: translateX(26px);
-          transform: translateX(26px);
-        }
-        
-        .slider.round:before {
-          border-radius: 50%;
+        .interactLabels {
+          position: relative;
+          left: 8px;
+          bottom: 9px;
         }
 
         </style>
@@ -177,21 +141,32 @@
           <h2>Interact:</h2>
         
           <div class="rows">
-            <label>Camera:</label>
             <a href = "/camera/toggle" class="switch" type="checkbox">
-              <input type="checkbox"></input>
               <span class={{ cameraSwitchBackground }}></span>
               <span class={{ cameraSwitchCircle }}></span>
             </a>
+            <label class=interactLabels>Camera</label>
           </div>
           
           <div class="rows">
-            <label>Sound:</label>
-            <a href = "/sound/toggle" class="switch" type="checkbox">
-              <input type="checkbox"></input>
-              <span class={{ soundSwitchBackground }}></span>
-              <span class={{ soundSwitchCircle }}></span>
-            </a>
+            <form method="POST" action="/read" class=interactLabels style="left: 0px;">
+              <a href = "/camera/toggle" class="switch" type="checkbox" style="top: 10px;">
+                <input  type = "submit" class={{ freqSwitchBackground }} value="">
+                <input  type = "submit" class={{ freqSwitchCircle }} value="">
+              </a>
+              <label class=interactLabels style="bottom: 0px;">Speaker at frequency</label>
+              <input type="text" name="inputFreq" autocomplete=off pattern="[0-9]+" value = {{ freqValue }}
+              maxlength=5 placeholder=1000  size="1" style="text-align: center; position:relative; left: 10px;">
+            </form>
+          </div>
+          
+          <div class="rows">
+            <a href = "/sound/song" class="button">Play</a>
+            <!--<a href = "/sound/song" class="switch" type="checkbox">-->
+            <!--  <span class={{ soundSwitchBackground }}></span>-->
+            <!--  <span class={{ soundSwitchCircle }}></span>-->
+            <!--</a>-->
+            <label class=interactLabels>Song</label>
           </div>
           
           <h2>Data: </h2>

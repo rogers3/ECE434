@@ -8,25 +8,22 @@
 #//////////////////////////////////////
 
 #import necessary libraries
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import Adafruit_BBIO.GPIO as GPIO
 import threading 
+import sound
 import time
-
 import os
 import subprocess
 import sys
 
-#define buzzer and set as output
-buzzer = "P8_11"
-GPIO.setup(buzzer, GPIO.OUT)
-
 cameraOn=False;
-soundOn=False;
+freqOn=False;
 csb = 'switchOffBackground';
 csc = 'switchOffCircle';
-ssb = 'switchOffBackground';
-ssc = 'switchOffCircle';
+fsb = 'switchOffBackground';
+fsc = 'switchOffCircle';
+inputFreq = "1000";
 
 def startVideo():
 	subprocess.run((["motion", "-n"]) )
@@ -38,14 +35,15 @@ def hello():
 	templateData = {
     	'cameraSwitchBackground' : csb,
 		'cameraSwitchCircle' : csc,
-    	'soundSwitchBackground' : ssb,
-    	'soundSwitchCircle': ssc
+    	'freqSwitchBackground' : fsb,
+    	'freqSwitchCircle': fsc,
+    	'freqValue' : inputFreq
 	}
 	return render_template('index.html', **templateData)
    
 @app.route("/<deviceName>/<action>")
 def action(deviceName, action):
-	global cameraOn, soundOn, csb, csc, ssb, ssc
+	global cameraOn, freqOn, csb, csc, fsb, fsc, inputFreq
 	print(deviceName, action)
 	
 	if((deviceName=="camera") & (action=="toggle")):
@@ -57,7 +55,6 @@ def action(deviceName, action):
 			print("before motion")
 			t1 = threading.Thread(target=startVideo)
 			t1.start()
-			# subprocess.run((["motion", "-n"]) )
 			print("before on")
 			time.sleep(4)
 			print("after on")
@@ -65,28 +62,42 @@ def action(deviceName, action):
 			subprocess.run((["pkill", "motion"]) )
 			csb = 'switchOffBackground'
 			csc = 'switchOffCircle'
-	if((deviceName=="sound") & (action=="toggle")):
-		# soundOn = ~soundOn
-		# if(soundOn):
-			ssb = 'switchOnBackground'
-			ssc = 'switchOnCircle'
-			for i in range(1000):
-				GPIO.output(buzzer, GPIO.HIGH)
-				time.sleep(0.001/2)
-				GPIO.output(buzzer, GPIO.LOW)
-				time.sleep(0.001/2)
-			ssb = 'switchOffBackground'
-			ssc = 'switchOffCircle'
-		# else:
-		# 	ssb = 'switchOffBackground'
-		# 	ssc = 'switchOffCircle'
+			
+	if((deviceName=="sound") & (action=="freq")):
+		freqOn = ~freqOn
+		print(inputFreq, type(inputFreq))
+		if(freqOn):
+			# sound.playFrequency(int(inputFreq))
+			fsb = 'switchOnBackground'
+			fsc = 'switchOnCircle'
+		else:
+			sound.stopSpeaker()
+			fsb = 'switchOffBackground'
+			fsc = 'switchOffCircle'
+			
+	if((deviceName=="sound") & (action=="song")):
+		sound.playSong()
+		
 	templateData = {
 				'cameraSwitchBackground' : csb,
 				'cameraSwitchCircle' : csc,
-		    	'soundSwitchBackground' : ssb,
-		    	'soundSwitchCircle': ssc
-			}
+		    	'freqSwitchBackground' : fsb,
+		    	'freqSwitchCircle': fsc,
+		    	'freqValue' : inputFreq
+		}
 	return render_template('index.html', **templateData)
+	
+@app.route('/read', methods=['POST'])
+def getData():
+	global inputFreq
+	if request.method == 'POST': 
+		if(inputFreq == None):
+			inputFreq = "10000"
+		else:
+			inputFreq = request.form['inputFreq']
+		return redirect ('/sound/freq')
+	else:
+		return redirect ('/')
 	
    
 if __name__ == "__main__":

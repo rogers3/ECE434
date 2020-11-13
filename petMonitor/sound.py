@@ -6,25 +6,50 @@
 # Description: This is a python program that toggles an LED on and off
 #//////////////////////////////////////
 
-#import necessary libraries
-import Adafruit_BBIO.GPIO as GPIO
+#!/usr/bin/env python3
 import time
+import sys
+sys.path.insert(0, '/lib')
+import PWMmay as PWM
 
-#define led and set as output
-led = "P8_11"
-GPIO.setup(led, GPIO.OUT)
 
-#callback funtion for when a button is pressed
-def toggleLed(pin):
-    if(GPIO.input(pin)):
-        GPIO.output(ledButtonDict.get(pin), GPIO.HIGH)
-    else:
-        GPIO.output(ledButtonDict.get(pin), GPIO.LOW)
+speaker = "P9_14"
+PWM
 
-#loop indefinatly
-while True:
-    GPIO.output(led, GPIO.HIGH)
-    time.sleep(0.001/2)
-    GPIO.output(led, GPIO.LOW)
-    time.sleep(0.001/2)
+notes = {
+    "A" : 440,
+    "B" : 494,
+    "C" : 262,
+    "D" : 294,
+    "E" : 330,
+    "F" : 349,
+    "G" : 392	
+}
 
+oldMcDonald = "CCCGAAG EEDDC GCCCGAAG EEDDC";
+
+
+def playSong():
+    err = PWM.start(speaker, 50, freq=10000)
+    if err == None:
+        exit()
+    
+    for i in range(len(oldMcDonald)):
+        if(oldMcDonald[i]!=" "):
+            PWM.set_duty_cycle(speaker, 50)
+            PWM.set_frequency(speaker, notes.get(oldMcDonald[i]))
+        time.sleep(.2)
+        PWM.set_duty_cycle(speaker, 0)
+        time.sleep(.5)
+        
+    PWM.stop(speaker)
+        
+def playFrequency(f):
+    err = PWM.start(speaker, 50, freq=f)
+    if err == None:
+        exit()
+    
+    
+def stopSpeaker():
+    PWM.stop(speaker)
+    
