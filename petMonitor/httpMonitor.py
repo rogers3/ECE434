@@ -57,8 +57,7 @@ def hello():
 def action(deviceName, action):
 	global cameraOn, freqOn, csb, csc, fsb, fsc, inputFreq, songOn, sb, initialMealTime, initialOutTime
 	t2 = threading.Thread(target=startSound)
-	print(deviceName, action)
-	
+
 	if((deviceName=="camera") & (action=="toggle")):
 		cameraOn = ~cameraOn
 		if(cameraOn):
@@ -113,7 +112,6 @@ def getData():
 			inputFreq = "10000"
 		else:
 			inputFreq = request.form['inputFreq']
-			# request.arg.put('test', 'testing')
 		return redirect ('/sound/freq')
 	else:
 		return redirect ('/')
