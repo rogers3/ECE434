@@ -13,51 +13,60 @@ import Adafruit_BBIO.GPIO as GPIO
 import threading 
 import sound
 import time
-import os
 import subprocess
-import sys
+import smbus
 
 cameraOn=False;
 freqOn=False;
+songOn=False;
 csb = 'switchOffBackground';
 csc = 'switchOffCircle';
 fsb = 'switchOffBackground';
 fsc = 'switchOffCircle';
 inputFreq = "1000";
+sb = "playButton"
+temp = "0"
+initialMealTime = time.time()
+initialOutTime = time.time()
 
-def startVideo():
-	subprocess.run((["motion", "-n"]) )
+# Use i2c bus 1 adress 0x4a and 0x48
+bus = smbus.SMBus(2)
+adress = 0x4a
 
-	
 app = Flask(__name__)
 @app.route("/")
 def hello():
+	global temp
+	temp = bus.read_byte_data(adress, 0)*9/5+32
+	initialMealOutput = getTimeSince(initialMealTime)
+	initialOutOutput = getTimeSince(initialOutTime)
 	templateData = {
     	'cameraSwitchBackground' : csb,
 		'cameraSwitchCircle' : csc,
     	'freqSwitchBackground' : fsb,
     	'freqSwitchCircle': fsc,
-    	'freqValue' : inputFreq
+    	'freqValue' : inputFreq,
+    	'songButton': sb,
+    	'temp' : temp,
+    	'mealTime' : initialMealOutput,
+    	'outTime' : initialOutOutput
 	}
 	return render_template('index.html', **templateData)
-   
+
 @app.route("/<deviceName>/<action>")
 def action(deviceName, action):
-	global cameraOn, freqOn, csb, csc, fsb, fsc, inputFreq
+	global cameraOn, freqOn, csb, csc, fsb, fsc, inputFreq, songOn, sb, initialMealTime, initialOutTime
+	t2 = threading.Thread(target=startSound)
 	print(deviceName, action)
 	
 	if((deviceName=="camera") & (action=="toggle")):
-		templateData = {}
 		cameraOn = ~cameraOn
 		if(cameraOn):
 			csb = 'switchOnBackground'
 			csc = 'switchOnCircle'
-			print("before motion")
 			t1 = threading.Thread(target=startVideo)
 			t1.start()
-			print("before on")
 			time.sleep(4)
-			print("after on")
 		else:
 			subprocess.run((["pkill", "motion"]) )
 			csb = 'switchOffBackground'
@@ -67,7 +76,7 @@ def action(deviceName, action):
 		freqOn = ~freqOn
 		print(inputFreq, type(inputFreq))
 		if(freqOn):
-			# sound.playFrequency(int(inputFreq))
+			sound.playFrequency(int(inputFreq))
 			fsb = 'switchOnBackground'
 			fsc = 'switchOnCircle'
 		else:
@@ -76,29 +85,55 @@ def action(deviceName, action):
 			fsc = 'switchOffCircle'
 			
 	if((deviceName=="sound") & (action=="song")):
-		sound.playSong()
+		songOn = ~songOn
+		if(songOn):
+			sb = "pauseButton"
+			t2.start()
+		else:
+			sb = "playButton"
+			try:
+				sound.stopSpeaker()
+			except:
+				print("speaker not playing")
+				
+	if((deviceName=="letOut") & (action=="press")):
+		initialOutTime = time.time()
 		
-	templateData = {
-				'cameraSwitchBackground' : csb,
-				'cameraSwitchCircle' : csc,
-		    	'freqSwitchBackground' : fsb,
-		    	'freqSwitchCircle': fsc,
-		    	'freqValue' : inputFreq
-		}
-	return render_template('index.html', **templateData)
+	if((deviceName=="feed") & (action=="press")):
+		initialMealTime = time.time()
+		
+	return redirect ('/')
 	
 @app.route('/read', methods=['POST'])
 def getData():
+	print("reading")
 	global inputFreq
 	if request.method == 'POST': 
 		if(inputFreq == None):
 			inputFreq = "10000"
 		else:
 			inputFreq = request.form['inputFreq']
+			# request.arg.put('test', 'testing')
 		return redirect ('/sound/freq')
 	else:
 		return redirect ('/')
+		
+def startVideo():
+	subprocess.run((["motion", "-n"]) )
 	
+def startSound():
+	global sb
+	sound.playSong()
+	sb = "playButton"
+
+def getTimeSince(initialTime):
+	if((time.time()-initialTime)>=3600):
+		initialMealOutput = str(int(int(time.time()-initialTime))/3600)+" hr    "+str(int(int(time.time()-initialTime)/60))+" m    "+str(int(time.time()-initialTime)%60)+" s"
+	elif((time.time()-initialTime)>=60):
+		initialMealOutput = str(int(int(time.time()-initialTime)/60))+" m    "+str(int(time.time()-initialTime)%60)+" s"
+	else:
+		initialMealOutput = str(int(time.time()-initialTime)%60)+" s"
+	return initialMealOutput
    
 if __name__ == "__main__":
    app.run(debug=True, port=434, host='0.0.0.0')

@@ -3,98 +3,49 @@
     <head>
         <title>Pet Monitor</title>
         <style>
-        .button {
-          position: absolute;
-          cursor: pointer;
-          content: "";
-          height: 26px;
-          width: 26px;
-          left: 30px;
-          bottom: 4px;
-          background-color: white;
-          border-radius: 50%;
-        }
+        body {
+              margin: 0;
+              padding: 0;
+              font-family: "Arial Narrow", "Arial", sans-serif;
+              background: #f5f5f5;
+          }
         .header {
           padding: 30px;
           text-align: center;
-          background: #1abc9c;
+          background: #2E86C1;
           color: white;
           font-size: 30px;
         }
-        .buttonBackground {
-          border: none;
-          color: white;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          cursor: pointer;
-          background-color: #ccc; 
-          margin: 4px 2px;
-          border-radius: 34px;
-          width: 60px;
-          height: 34px;
-        }
-        
-        /* Control the left side */
         .left {
-          width: 50%;
-          position: fixed;
-          z-index: 1;
-          overflow-x: hidden;
-          padding-top: 20px;
-          padding-left: 20px;
-          left: 0;
+          margin: 0;
+          position: absolute;
+          top: 40%;
+          left: 25%;
+          -ms-transform: translate(-25%, -40%);
+          transform: translate(-25%, -40%);
         }
-        
-        /* Control the right side */
         .right {
-          width: 50%;
-          position: fixed;
-          z-index: 1;
-          overflow-x: hidden;
-          padding-top: 20px;
-          right: 0;
+          margin: 0;
+          position: absolute;
+          top: 40%;
+          left: 80%;
+          -ms-transform: translate(-80%, -40%);
+          transform: translate(-80%, -40%);
         }
-        
-        .rows{
-          padding: 7px 32px;
+        .bottom {
+            margin: 0;
+            position: absolute;
+            top: 93%;
+            left: 50%;
+            -ms-transform: translate(-50%, -93%);
+            transform: translate(-50%, -93%);
         }
-        
-        /* The switch - the box around the slider */
         .switch {
           position: relative;
           display: inline-block;
           width: 60px;
           height: 34px;
         }
-        
-        .switchOnBackground {
-          position: absolute;
-          cursor: pointer;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          border-radius: 34px;
-          background-color: #2196F3;
-          border-style: none;
-          width: 60px;
-        }
-        
-        .switchOnCircle {
-          position: absolute;
-          cursor: pointer;
-          content: "";
-          height: 26px;
-          width: 26px;
-          left: 30px;
-          bottom: 4px;
-          background-color: white;
-          border-radius: 50%;
-          border-style: none;
-        }
-        
         .switchOffBackground {
           position: absolute;
           display: inline-block;
@@ -108,7 +59,16 @@
           border-radius: 34px;
           border-style: none;
         }
-        
+        .switchOffBackground[id="switchOnBackground"]{
+          background-color: #2E86C1;
+        }
+        l[id="playButton"]{
+          background-color: #53c653;
+          /*background-color: #79d279;*/
+        }
+        l[id="pauseButton"]{
+          background-color: #ff4d4d;
+        }
         .switchOffCircle {
           position: absolute;
           cursor: pointer;
@@ -121,12 +81,88 @@
           border-radius: 50%;
           border-style: none;
         }
-        
+        .switchOffCircle[id="switchOnCircle"] {
+          left: 30px;
+        }
         .interactLabels {
           position: relative;
           left: 8px;
           bottom: 9px;
         }
+        .playButton {
+          position: absolute;
+          border: 0;
+          background: transparent;
+          top: 5px;
+          left: 20px;
+          border-color: transparent transparent transparent #202020;
+          cursor: pointer;
+          border-style: solid;
+          border-width: 12px 0 12px 24px;
+        }
+        .playButton[id="pauseButton"] {
+          height: 23px;
+          left: 22px; 
+          border-style: double;
+          border-width: 0px 0 0px 15px;
+        }
+        .animatedbtn {
+            position: relative;
+            -webkit-appearance: none;
+               -moz-appearance: none;
+                    appearance: none;
+            background-color: transparent;
+            border: 2px solid #53c653;
+            border-radius: 0.6em;
+            color: #53c653;
+            cursor: pointer;
+            -webkit-align-self: center;
+                -ms-flex-item-align: center;
+                    align-self: center;
+            font-size: 1rem;
+            margin: 20px;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+            transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+          }
+          .animatedbtn:hover, .animatedbtn:focus {
+            color: #fff;
+            outline: 0;
+            box-shadow: 0 0 40px 40px #53c653 inset;
+          }
+          .btn-green {
+              position: relative;
+              width: 300px;
+              height: 60px;
+              margin: 20px auto;
+              padding: 0;
+              font-size: 22px;
+              text-align: center;
+              color: white;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              overflow: hidden;
+              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+              transition: transform 0.4s ease-in-out;
+              background: #2E86C1;
+              border-bottom: 2px solid #2E86C1;
+              box-shadow: inset 0 -2px #2E86C1;
+          }
+          .btn-green .icon {
+              position: absolute;
+              left: 20px;
+              width: 24px;
+              height: 24px;
+              transition: all 0.4s ease-in-out;
+          }
+          .btn-green:hover .icon {
+              transform: rotate(360deg) scale(1.2);
+          }
 
         </style>
     </head>
@@ -136,55 +172,64 @@
           <h1 class='header'>Pet Monitor</h1>
         </div>
         
-        
         <div class="left">
           <h2>Interact:</h2>
-        
-          <div class="rows">
+          
+          <div style="padding: 7px 32px;">
             <a href = "/camera/toggle" class="switch" type="checkbox">
-              <span class={{ cameraSwitchBackground }}></span>
-              <span class={{ cameraSwitchCircle }}></span>
+              <span class=switchOffBackground id={{ cameraSwitchBackground }}></span>
+              <span class=switchOffCircle id={{ cameraSwitchCircle }}></span>
             </a>
             <label class=interactLabels>Camera</label>
           </div>
           
-          <div class="rows">
+          <div style="padding: 7px 32px;">
             <form method="POST" action="/read" class=interactLabels style="left: 0px;">
               <a href = "/camera/toggle" class="switch" type="checkbox" style="top: 10px;">
-                <input  type = "submit" class={{ freqSwitchBackground }} value="">
-                <input  type = "submit" class={{ freqSwitchCircle }} value="">
+                <input  type = "submit" class=switchOffBackground id={{ freqSwitchBackground }} value="">
+                <input  type = "submit" class=switchOffCircle id={{ freqSwitchCircle }} value="">
               </a>
               <label class=interactLabels style="bottom: 0px;">Speaker at frequency</label>
               <input type="text" name="inputFreq" autocomplete=off pattern="[0-9]+" value = {{ freqValue }}
               maxlength=5 placeholder=1000  size="1" style="text-align: center; position:relative; left: 10px;">
+              <outputname="test"></output>
             </form>
           </div>
           
-          <div class="rows">
-            <a href = "/sound/song" class="button">Play</a>
-            <!--<a href = "/sound/song" class="switch" type="checkbox">-->
-            <!--  <span class={{ soundSwitchBackground }}></span>-->
-            <!--  <span class={{ soundSwitchCircle }}></span>-->
-            <!--</a>-->
+          <div style="padding: 7px 32px;">
+            <!--<a href = "/sound/song" class="button">Play</a>-->
+            <a href = "/sound/song" class="switch" type="checkbox">
+              <l class=switchOffBackground id="{{ songButton }}"]></l>
+              <button class=playButton id={{ songButton }}></button>
+            </a>
             <label class=interactLabels>Song</label>
+            <label class=interactLabels></label>
           </div>
           
           <h2>Data: </h2>
-          <div class="rows">
-          <label> Time since last meal: </label>
-          </div>
-          <div class="rows">
-          <label> Time since last let out: </label>
-          </div>
-          
+          <label style="padding: 7px 32px; display: block;"> Temperature: {{ temp }} °F</label>
+          <label style="padding: 7px 32px; display: block;"> Time since last meal: {{ mealTime }}</label>
+          <label style="padding: 7px 32px; display: block;"> Time since last let out: {{ outTime }} </label>
+          <a href = "/letOut/press">
+            <button style="left: 20px"class="animatedbtn">Let out</button>
+          </a>
+          <a href = "/feed/press">
+            <button class="animatedbtn">Feed</button>
+          </a>
         </div>
         
         
         <div class="right">
           <div class="centered">
-             <img src="http://192.168.7.2:8081/" alt="http://192.168.7.2:8081/">
+             <img src="http://192.168.7.2:8081/" alt="http://192.168.7.2:8081/" style="width: 640px; height: 480px;">
           </div>
         </div>
         
+    		<a href = "/refrsh/press" class="bottom">
+    		  <button class="btn-green">
+      			<img class="icon" src="https://htmlacademy.ru/assets/icons/reload-6x-white.png"> Reload
+      		</button>
+    		</a>
+
     </body>
 </html>

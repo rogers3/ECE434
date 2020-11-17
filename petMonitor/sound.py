@@ -40,7 +40,7 @@ def playSong():
             PWM.set_frequency(speaker, notes.get(oldMcDonald[i]))
         time.sleep(.2)
         PWM.set_duty_cycle(speaker, 0)
-        time.sleep(.5)
+        time.sleep(.05)
         
     PWM.stop(speaker)
         
