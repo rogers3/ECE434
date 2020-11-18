@@ -44,7 +44,7 @@ This should open the Pet Monitor on yourLocalHost:434 (read Installation for mor
 Monitor can be accessed
 
 ## Making Pet Monitor Publically accesable: ##
-If desired, the pet monitor can be made available on non-local hosts as well. This is done by first configuring ngrok (see Installation Instructions) and then in a 
+If desired, the pet monitor can be made available on non-local hosts as well. This is done by first configuring ngrok (see Installation) and then in a 
 '''new''' terminal entering
 
     bone$ ./ngrok http 434
