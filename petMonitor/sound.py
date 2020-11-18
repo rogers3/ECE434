@@ -1,10 +1,4 @@
 #!/usr/bin/python3
-#//////////////////////////////////////
-# Author: Christina Rogers
-# CM: 473
-# Date: 9/16/2020
-# Description: This is a python program that toggles an LED on and off
-#//////////////////////////////////////
 
 #!/usr/bin/env python3
 import time

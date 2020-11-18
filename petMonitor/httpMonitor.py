@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
 
-#//////////////////////////////////////
-# Author: Christina Rogers
-# CM: 473
-# Date: 10/1/2020
-# Description: 
-#//////////////////////////////////////
-
 #import necessary libraries
 from flask import Flask, render_template, request, redirect
 import Adafruit_BBIO.GPIO as GPIO
