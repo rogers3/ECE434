@@ -30,7 +30,7 @@ oldMcDonald = "CCCGAAG EEDDC GCCCGAAG EEDDC";
 
 
 def playSong():
-    err = PWM.start(speaker, 50, freq=10000)
+    err = PWM.start(speaker, 50, freq=262)
     if err == None:
         exit()
     

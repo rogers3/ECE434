@@ -36206,3 +36206,368 @@ cap.capabilities=0x85200001
 [0:motion] [NTC] [ALL] [Nov 17 17:06:11] main: Threads finished
 [0:motion] [NTC] [ALL] [Nov 17 17:06:12] main: Motion terminating
 [0:motion] [NTC] [ALL] [Nov 17 17:06:12] motion_remove_pid: Closing logfile (motion.log).
+[32368264:motion] [NTC] [ALL] [Nov 17 17:29:58] motion_startup: Using log type (ALL) log level (NTC)
+[32368264:motion] [NTC] [ENC] [Nov 17 17:29:58] ffmpeg_global_init: ffmpeg libavcodec version 58.35.100 libavformat version 58.20.100
+[0:motion] [NTC] [ALL] [Nov 17 17:29:58] main: Camera ID: 0 is from /home/debian/ECE434/petMonitor/motion.conf
+[0:motion] [NTC] [ALL] [Nov 17 17:29:58] main: Camera ID: 0 Camera Name: (null) Device: /dev/video0
+[0:motion] [NTC] [ALL] [Nov 17 17:29:58] main: Waiting for threads to finish, pid: 2625
+[0:wc0] [CRT] [STR] [Nov 17 17:29:58] http_bindsock: error binding on 127.0.0.1 port 8080: Address already in use
+[0:wc0] [NTC] [STR] [Nov 17 17:29:58] motion_web_control: motion-httpd thread exit
+[1:ml1] [NTC] [ALL] [Nov 17 17:29:58] motion_init: Camera 0 started: motion detection Enabled
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] vid_start: Opening V4L2 device
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_start: Using videodevice /dev/video0 and input -1
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_get_capability: 
+------------------------
+cap.driver: "ov534"
+cap.card: "USB Camera-B4.09.24.1"
+cap.bus_info: "usb-musb-hdrc.1-1"
+cap.capabilities=0x85200001
+------------------------
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_get_capability: - VIDEO_CAPTURE
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_get_capability: - READWRITE
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_get_capability: - STREAMING
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_select_input: name = "ov534", type 0x00000002, status 00000000
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_select_input: - CAMERA
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_select_input: Device does not support specifying PAL/NTSC norm
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_set_pix_format: Configuration palette index 17 (YU12) doesn't work.
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_set_pix_format: Supported palettes:
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_set_pix_format: (0) YUYV (YUYV 4:2:2)
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_set_pix_format: 0 - YUYV 4:2:2 (compressed : 0) (0x56595559)
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_do_set_pix_format: Testing palette YUYV (320x240)
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_do_set_pix_format: Using palette YUYV (320x240) bytesperlines 640 sizeimage 153600 colorspace 00000008
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_set_pix_format: Selected palette YUYV
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: found control 0x00980900, "Brightness", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: 	"Brightness", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: found control 0x00980901, "Contrast", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: 	"Contrast", default 32, current 32
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: found control 0x00980902, "Saturation", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: 	"Saturation", default 64, current 64
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: found control 0x00980903, "Hue", range -90,90 
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: 	"Hue", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: found control 0x00980918, "Power Line Frequency", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: 	"Power Line Frequency", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: found control 0x00980911, "Exposure", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: 	"Exposure", default 120, current 120
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: found control 0x00980912, "Gain, Automatic", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: 	"Gain, Automatic", default 1, current 1
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: found control 0x00980913, "Gain", range 0,63 
+[1:ml1] [NTC] [VID] [Nov 17 17:29:58] v4l2_scan_controls: 	"Gain", default 20, current 20
+[1:ml1] [NTC] [ALL] [Nov 17 17:29:59] image_ring_resize: Resizing pre_capture buffer to 1 items
+[1:ml1] [NTC] [STR] [Nov 17 17:29:59] http_bindsock: listening on any IPv4 address port 8081
+[1:ml1] [NTC] [ALL] [Nov 17 17:29:59] motion_init: Started motion-stream server on port 8081 (auth Disabled)
+[1:ml1] [NTC] [ALL] [Nov 17 17:30:17] mlp_actions: End of event 1
+[1:ml1] [NTC] [ALL] [Nov 17 17:30:17] motion_loop: Thread exiting
+[1:ml1] [NTC] [STR] [Nov 17 17:30:17] stream_stop: Closing motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [STR] [Nov 17 17:30:17] stream_stop: Closed motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [VID] [Nov 17 17:30:17] vid_close: Cleaning up V4L2 device
+[1:ml1] [NTC] [VID] [Nov 17 17:30:17] v4l2_cleanup: Closing video device /dev/video0
+[0:motion] [NTC] [ALL] [Nov 17 17:30:17] main: Threads finished
+[0:motion] [NTC] [ALL] [Nov 17 17:30:18] main: Motion terminating
+[0:motion] [NTC] [ALL] [Nov 17 17:30:18] motion_remove_pid: Closing logfile (motion.log).
+[27473544:motion] [NTC] [ALL] [Nov 17 17:40:01] motion_startup: Using log type (ALL) log level (NTC)
+[27473544:motion] [NTC] [ENC] [Nov 17 17:40:01] ffmpeg_global_init: ffmpeg libavcodec version 58.35.100 libavformat version 58.20.100
+[0:motion] [NTC] [ALL] [Nov 17 17:40:01] main: Camera ID: 0 is from /home/debian/ECE434/petMonitor/motion.conf
+[0:motion] [NTC] [ALL] [Nov 17 17:40:01] main: Camera ID: 0 Camera Name: (null) Device: /dev/video0
+[0:motion] [NTC] [ALL] [Nov 17 17:40:01] main: Waiting for threads to finish, pid: 2721
+[0:wc0] [CRT] [STR] [Nov 17 17:40:01] http_bindsock: error binding on 127.0.0.1 port 8080: Address already in use
+[0:wc0] [NTC] [STR] [Nov 17 17:40:01] motion_web_control: motion-httpd thread exit
+[1:ml1] [NTC] [ALL] [Nov 17 17:40:01] motion_init: Camera 0 started: motion detection Enabled
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] vid_start: Opening V4L2 device
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_start: Using videodevice /dev/video0 and input -1
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_get_capability: 
+------------------------
+cap.driver: "ov534"
+cap.card: "USB Camera-B4.09.24.1"
+cap.bus_info: "usb-musb-hdrc.1-1"
+cap.capabilities=0x85200001
+------------------------
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_get_capability: - VIDEO_CAPTURE
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_get_capability: - READWRITE
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_get_capability: - STREAMING
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_select_input: name = "ov534", type 0x00000002, status 00000000
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_select_input: - CAMERA
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_select_input: Device does not support specifying PAL/NTSC norm
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_set_pix_format: Configuration palette index 17 (YU12) doesn't work.
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_set_pix_format: Supported palettes:
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_set_pix_format: (0) YUYV (YUYV 4:2:2)
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_set_pix_format: 0 - YUYV 4:2:2 (compressed : 0) (0x56595559)
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_do_set_pix_format: Testing palette YUYV (320x240)
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_do_set_pix_format: Using palette YUYV (320x240) bytesperlines 640 sizeimage 153600 colorspace 00000008
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_set_pix_format: Selected palette YUYV
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: found control 0x00980900, "Brightness", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: 	"Brightness", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: found control 0x00980901, "Contrast", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: 	"Contrast", default 32, current 32
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: found control 0x00980902, "Saturation", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: 	"Saturation", default 64, current 64
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: found control 0x00980903, "Hue", range -90,90 
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: 	"Hue", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: found control 0x00980918, "Power Line Frequency", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: 	"Power Line Frequency", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: found control 0x00980911, "Exposure", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: 	"Exposure", default 120, current 120
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: found control 0x00980912, "Gain, Automatic", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: 	"Gain, Automatic", default 1, current 1
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: found control 0x00980913, "Gain", range 0,63 
+[1:ml1] [NTC] [VID] [Nov 17 17:40:01] v4l2_scan_controls: 	"Gain", default 20, current 20
+[1:ml1] [NTC] [ALL] [Nov 17 17:40:02] image_ring_resize: Resizing pre_capture buffer to 1 items
+[1:ml1] [NTC] [STR] [Nov 17 17:40:02] http_bindsock: listening on any IPv4 address port 8081
+[1:ml1] [NTC] [ALL] [Nov 17 17:40:02] motion_init: Started motion-stream server on port 8081 (auth Disabled)
+[1:ml1] [NTC] [EVT] [Nov 17 17:40:09] event_newfile: File of type 8 saved to: /var/lib/motion/01-20201117174009.avi
+[1:ml1] [NTC] [ALL] [Nov 17 17:40:09] motion_detected: Motion detected - starting event 1
+[1:ml1] [NTC] [ALL] [Nov 17 17:51:14] mlp_actions: End of event 1
+[1:ml1] [NTC] [EVT] [Nov 17 17:52:36] event_newfile: File of type 8 saved to: /var/lib/motion/02-20201117175235.avi
+[1:ml1] [NTC] [ALL] [Nov 17 17:52:36] motion_detected: Motion detected - starting event 2
+[1:ml1] [NTC] [ALL] [Nov 17 17:53:37] mlp_actions: End of event 2
+[1:ml1] [NTC] [EVT] [Nov 17 17:55:57] event_newfile: File of type 8 saved to: /var/lib/motion/03-20201117175557.avi
+[1:ml1] [NTC] [ALL] [Nov 17 17:55:57] motion_detected: Motion detected - starting event 3
+[1:ml1] [NTC] [ALL] [Nov 17 17:57:53] mlp_actions: End of event 3
+[1:ml1] [NTC] [EVT] [Nov 17 18:04:01] event_newfile: File of type 8 saved to: /var/lib/motion/04-20201117180401.avi
+[1:ml1] [NTC] [ALL] [Nov 17 18:04:01] motion_detected: Motion detected - starting event 4
+[1:ml1] [NTC] [ALL] [Nov 17 18:04:25] mlp_actions: End of event 4
+[1:ml1] [NTC] [ALL] [Nov 17 18:04:25] motion_loop: Thread exiting
+[1:ml1] [NTC] [STR] [Nov 17 18:04:25] stream_stop: Closing motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [STR] [Nov 17 18:04:25] stream_stop: Closed motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [VID] [Nov 17 18:04:25] vid_close: Cleaning up V4L2 device
+[1:ml1] [NTC] [VID] [Nov 17 18:04:25] v4l2_cleanup: Closing video device /dev/video0
+[0:motion] [NTC] [ALL] [Nov 17 18:04:25] main: Threads finished
+[0:motion] [NTC] [ALL] [Nov 17 18:04:26] main: Motion terminating
+[0:motion] [NTC] [ALL] [Nov 17 18:04:26] motion_remove_pid: Closing logfile (motion.log).
+[6198920:motion] [NTC] [ALL] [Nov 18 01:20:27] motion_startup: Using log type (ALL) log level (NTC)
+[6198920:motion] [NTC] [ENC] [Nov 18 01:20:27] ffmpeg_global_init: ffmpeg libavcodec version 58.35.100 libavformat version 58.20.100
+[0:motion] [NTC] [ALL] [Nov 18 01:20:27] main: Camera ID: 0 is from /home/debian/ECE434/petMonitor/motion.conf
+[0:motion] [NTC] [ALL] [Nov 18 01:20:27] main: Camera ID: 0 Camera Name: (null) Device: /dev/video0
+[0:motion] [NTC] [ALL] [Nov 18 01:20:27] main: Waiting for threads to finish, pid: 3148
+[0:wc0] [CRT] [STR] [Nov 18 01:20:27] http_bindsock: error binding on 127.0.0.1 port 8080: Address already in use
+[0:wc0] [NTC] [STR] [Nov 18 01:20:27] motion_web_control: motion-httpd thread exit
+[1:ml1] [NTC] [ALL] [Nov 18 01:20:27] motion_init: Camera 0 started: motion detection Enabled
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] vid_start: Opening V4L2 device
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_start: Using videodevice /dev/video0 and input -1
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_get_capability: 
+------------------------
+cap.driver: "ov534"
+cap.card: "USB Camera-B4.09.24.1"
+cap.bus_info: "usb-musb-hdrc.1-1"
+cap.capabilities=0x85200001
+------------------------
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_get_capability: - VIDEO_CAPTURE
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_get_capability: - READWRITE
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_get_capability: - STREAMING
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_select_input: name = "ov534", type 0x00000002, status 00000000
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_select_input: - CAMERA
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_select_input: Device does not support specifying PAL/NTSC norm
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_set_pix_format: Configuration palette index 17 (YU12) doesn't work.
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_set_pix_format: Supported palettes:
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_set_pix_format: (0) YUYV (YUYV 4:2:2)
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_set_pix_format: 0 - YUYV 4:2:2 (compressed : 0) (0x56595559)
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_do_set_pix_format: Testing palette YUYV (320x240)
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_do_set_pix_format: Using palette YUYV (320x240) bytesperlines 640 sizeimage 153600 colorspace 00000008
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_set_pix_format: Selected palette YUYV
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: found control 0x00980900, "Brightness", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: 	"Brightness", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: found control 0x00980901, "Contrast", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: 	"Contrast", default 32, current 32
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: found control 0x00980902, "Saturation", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: 	"Saturation", default 64, current 64
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: found control 0x00980903, "Hue", range -90,90 
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: 	"Hue", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: found control 0x00980918, "Power Line Frequency", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: 	"Power Line Frequency", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: found control 0x00980911, "Exposure", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: 	"Exposure", default 120, current 120
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: found control 0x00980912, "Gain, Automatic", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: 	"Gain, Automatic", default 1, current 1
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: found control 0x00980913, "Gain", range 0,63 
+[1:ml1] [NTC] [VID] [Nov 18 01:20:27] v4l2_scan_controls: 	"Gain", default 20, current 20
+[1:ml1] [NTC] [ALL] [Nov 18 01:20:28] image_ring_resize: Resizing pre_capture buffer to 1 items
+[1:ml1] [NTC] [STR] [Nov 18 01:20:28] http_bindsock: listening on any IPv4 address port 8081
+[1:ml1] [NTC] [ALL] [Nov 18 01:20:28] motion_init: Started motion-stream server on port 8081 (auth Disabled)
+[1:ml1] [NTC] [EVT] [Nov 18 01:20:35] event_newfile: File of type 8 saved to: /var/lib/motion/01-20201118012035.avi
+[1:ml1] [NTC] [ALL] [Nov 18 01:20:35] motion_detected: Motion detected - starting event 1
+[1:ml1] [NTC] [ALL] [Nov 18 01:20:47] mlp_actions: End of event 1
+[1:ml1] [NTC] [ALL] [Nov 18 01:20:47] motion_loop: Thread exiting
+[1:ml1] [NTC] [STR] [Nov 18 01:20:47] stream_stop: Closing motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [STR] [Nov 18 01:20:47] stream_stop: Closed motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [VID] [Nov 18 01:20:47] vid_close: Cleaning up V4L2 device
+[1:ml1] [NTC] [VID] [Nov 18 01:20:47] v4l2_cleanup: Closing video device /dev/video0
+[0:motion] [NTC] [ALL] [Nov 18 01:20:47] main: Threads finished
+[0:motion] [NTC] [ALL] [Nov 18 01:20:48] main: Motion terminating
+[0:motion] [NTC] [ALL] [Nov 18 01:20:48] motion_remove_pid: Closing logfile (motion.log).
+[7743112:motion] [NTC] [ALL] [Nov 18 01:27:42] motion_startup: Using log type (ALL) log level (NTC)
+[7743112:motion] [NTC] [ENC] [Nov 18 01:27:42] ffmpeg_global_init: ffmpeg libavcodec version 58.35.100 libavformat version 58.20.100
+[0:motion] [NTC] [ALL] [Nov 18 01:27:42] main: Camera ID: 0 is from /home/debian/ECE434/petMonitor/motion.conf
+[0:motion] [NTC] [ALL] [Nov 18 01:27:42] main: Camera ID: 0 Camera Name: (null) Device: /dev/video0
+[0:motion] [NTC] [ALL] [Nov 18 01:27:42] main: Waiting for threads to finish, pid: 3256
+[0:wc0] [CRT] [STR] [Nov 18 01:27:42] http_bindsock: error binding on 127.0.0.1 port 8080: Address already in use
+[0:wc0] [NTC] [STR] [Nov 18 01:27:42] motion_web_control: motion-httpd thread exit
+[1:ml1] [NTC] [ALL] [Nov 18 01:27:42] motion_init: Camera 0 started: motion detection Enabled
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] vid_start: Opening V4L2 device
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_start: Using videodevice /dev/video0 and input -1
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_get_capability: 
+------------------------
+cap.driver: "ov534"
+cap.card: "USB Camera-B4.09.24.1"
+cap.bus_info: "usb-musb-hdrc.1-1"
+cap.capabilities=0x85200001
+------------------------
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_get_capability: - VIDEO_CAPTURE
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_get_capability: - READWRITE
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_get_capability: - STREAMING
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_select_input: name = "ov534", type 0x00000002, status 00000000
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_select_input: - CAMERA
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_select_input: Device does not support specifying PAL/NTSC norm
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_set_pix_format: Configuration palette index 17 (YU12) doesn't work.
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_set_pix_format: Supported palettes:
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_set_pix_format: (0) YUYV (YUYV 4:2:2)
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_set_pix_format: 0 - YUYV 4:2:2 (compressed : 0) (0x56595559)
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_do_set_pix_format: Testing palette YUYV (320x240)
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_do_set_pix_format: Using palette YUYV (320x240) bytesperlines 640 sizeimage 153600 colorspace 00000008
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_set_pix_format: Selected palette YUYV
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: found control 0x00980900, "Brightness", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: 	"Brightness", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: found control 0x00980901, "Contrast", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: 	"Contrast", default 32, current 32
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: found control 0x00980902, "Saturation", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: 	"Saturation", default 64, current 64
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: found control 0x00980903, "Hue", range -90,90 
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: 	"Hue", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: found control 0x00980918, "Power Line Frequency", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: 	"Power Line Frequency", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: found control 0x00980911, "Exposure", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: 	"Exposure", default 120, current 120
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: found control 0x00980912, "Gain, Automatic", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: 	"Gain, Automatic", default 1, current 1
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: found control 0x00980913, "Gain", range 0,63 
+[1:ml1] [NTC] [VID] [Nov 18 01:27:42] v4l2_scan_controls: 	"Gain", default 20, current 20
+[1:ml1] [NTC] [ALL] [Nov 18 01:27:42] image_ring_resize: Resizing pre_capture buffer to 1 items
+[1:ml1] [NTC] [STR] [Nov 18 01:27:43] http_bindsock: listening on any IPv4 address port 8081
+[1:ml1] [NTC] [ALL] [Nov 18 01:27:43] motion_init: Started motion-stream server on port 8081 (auth Disabled)
+[1:ml1] [NTC] [ALL] [Nov 18 01:28:52] mlp_actions: End of event 1
+[1:ml1] [NTC] [ALL] [Nov 18 01:28:52] motion_loop: Thread exiting
+[1:ml1] [NTC] [STR] [Nov 18 01:28:52] stream_stop: Closing motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [STR] [Nov 18 01:28:52] stream_stop: Closed motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [VID] [Nov 18 01:28:52] vid_close: Cleaning up V4L2 device
+[1:ml1] [NTC] [VID] [Nov 18 01:28:52] v4l2_cleanup: Closing video device /dev/video0
+[0:motion] [NTC] [ALL] [Nov 18 01:28:53] main: Threads finished
+[0:motion] [NTC] [ALL] [Nov 18 01:28:54] main: Motion terminating
+[0:motion] [NTC] [ALL] [Nov 18 01:28:54] motion_remove_pid: Closing logfile (motion.log).
+[14259848:motion] [NTC] [ALL] [Nov 18 01:39:54] motion_startup: Using log type (ALL) log level (NTC)
+[14259848:motion] [NTC] [ENC] [Nov 18 01:39:54] ffmpeg_global_init: ffmpeg libavcodec version 58.35.100 libavformat version 58.20.100
+[0:motion] [NTC] [ALL] [Nov 18 01:39:54] main: Camera ID: 0 is from /home/debian/ECE434/petMonitor/motion.conf
+[0:motion] [NTC] [ALL] [Nov 18 01:39:54] main: Camera ID: 0 Camera Name: (null) Device: /dev/video0
+[0:motion] [NTC] [ALL] [Nov 18 01:39:54] main: Waiting for threads to finish, pid: 3419
+[0:wc0] [CRT] [STR] [Nov 18 01:39:54] http_bindsock: error binding on 127.0.0.1 port 8080: Address already in use
+[0:wc0] [NTC] [STR] [Nov 18 01:39:54] motion_web_control: motion-httpd thread exit
+[1:ml1] [NTC] [ALL] [Nov 18 01:39:54] motion_init: Camera 0 started: motion detection Enabled
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] vid_start: Opening V4L2 device
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_start: Using videodevice /dev/video0 and input -1
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_get_capability: 
+------------------------
+cap.driver: "ov534"
+cap.card: "USB Camera-B4.09.24.1"
+cap.bus_info: "usb-musb-hdrc.1-1"
+cap.capabilities=0x85200001
+------------------------
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_get_capability: - VIDEO_CAPTURE
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_get_capability: - READWRITE
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_get_capability: - STREAMING
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_select_input: name = "ov534", type 0x00000002, status 00000000
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_select_input: - CAMERA
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_select_input: Device does not support specifying PAL/NTSC norm
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_set_pix_format: Configuration palette index 17 (YU12) doesn't work.
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_set_pix_format: Supported palettes:
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_set_pix_format: (0) YUYV (YUYV 4:2:2)
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_set_pix_format: 0 - YUYV 4:2:2 (compressed : 0) (0x56595559)
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_do_set_pix_format: Testing palette YUYV (320x240)
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_do_set_pix_format: Using palette YUYV (320x240) bytesperlines 640 sizeimage 153600 colorspace 00000008
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_set_pix_format: Selected palette YUYV
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: found control 0x00980900, "Brightness", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: 	"Brightness", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: found control 0x00980901, "Contrast", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: 	"Contrast", default 32, current 32
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: found control 0x00980902, "Saturation", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: 	"Saturation", default 64, current 64
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: found control 0x00980903, "Hue", range -90,90 
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: 	"Hue", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: found control 0x00980918, "Power Line Frequency", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: 	"Power Line Frequency", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: found control 0x00980911, "Exposure", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: 	"Exposure", default 120, current 120
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: found control 0x00980912, "Gain, Automatic", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: 	"Gain, Automatic", default 1, current 1
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: found control 0x00980913, "Gain", range 0,63 
+[1:ml1] [NTC] [VID] [Nov 18 01:39:54] v4l2_scan_controls: 	"Gain", default 20, current 20
+[1:ml1] [NTC] [ALL] [Nov 18 01:39:55] image_ring_resize: Resizing pre_capture buffer to 1 items
+[1:ml1] [NTC] [STR] [Nov 18 01:39:55] http_bindsock: listening on any IPv4 address port 8081
+[1:ml1] [NTC] [ALL] [Nov 18 01:39:55] motion_init: Started motion-stream server on port 8081 (auth Disabled)
+[1:ml1] [NTC] [EVT] [Nov 18 01:40:04] event_newfile: File of type 8 saved to: /var/lib/motion/01-20201118014004.avi
+[1:ml1] [NTC] [ALL] [Nov 18 01:40:04] motion_detected: Motion detected - starting event 1
+[1:ml1] [NTC] [ALL] [Nov 18 01:40:15] mlp_actions: End of event 1
+[1:ml1] [NTC] [ALL] [Nov 18 01:40:15] motion_loop: Thread exiting
+[1:ml1] [NTC] [STR] [Nov 18 01:40:15] stream_stop: Closing motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [STR] [Nov 18 01:40:15] stream_stop: Closed motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [VID] [Nov 18 01:40:15] vid_close: Cleaning up V4L2 device
+[1:ml1] [NTC] [VID] [Nov 18 01:40:15] v4l2_cleanup: Closing video device /dev/video0
+[0:motion] [NTC] [ALL] [Nov 18 01:40:16] main: Threads finished
+[0:motion] [NTC] [ALL] [Nov 18 01:40:17] main: Motion terminating
+[0:motion] [NTC] [ALL] [Nov 18 01:40:17] motion_remove_pid: Closing logfile (motion.log).
+[23451272:motion] [NTC] [ALL] [Nov 18 01:57:59] motion_startup: Using log type (ALL) log level (NTC)
+[23451272:motion] [NTC] [ENC] [Nov 18 01:57:59] ffmpeg_global_init: ffmpeg libavcodec version 58.35.100 libavformat version 58.20.100
+[0:motion] [NTC] [ALL] [Nov 18 01:57:59] main: Camera ID: 0 is from /home/debian/ECE434/petMonitor/motion.conf
+[0:motion] [NTC] [ALL] [Nov 18 01:57:59] main: Camera ID: 0 Camera Name: (null) Device: /dev/video0
+[0:motion] [NTC] [ALL] [Nov 18 01:57:59] main: Waiting for threads to finish, pid: 3565
+[0:wc0] [CRT] [STR] [Nov 18 01:57:59] http_bindsock: error binding on 127.0.0.1 port 8080: Address already in use
+[0:wc0] [NTC] [STR] [Nov 18 01:57:59] motion_web_control: motion-httpd thread exit
+[1:ml1] [NTC] [ALL] [Nov 18 01:57:59] motion_init: Camera 0 started: motion detection Enabled
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] vid_start: Opening V4L2 device
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_start: Using videodevice /dev/video0 and input -1
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_get_capability: 
+------------------------
+cap.driver: "ov534"
+cap.card: "USB Camera-B4.09.24.1"
+cap.bus_info: "usb-musb-hdrc.1-1"
+cap.capabilities=0x85200001
+------------------------
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_get_capability: - VIDEO_CAPTURE
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_get_capability: - READWRITE
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_get_capability: - STREAMING
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_select_input: name = "ov534", type 0x00000002, status 00000000
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_select_input: - CAMERA
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_select_input: Device does not support specifying PAL/NTSC norm
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_set_pix_format: Configuration palette index 17 (YU12) doesn't work.
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_set_pix_format: Supported palettes:
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_set_pix_format: (0) YUYV (YUYV 4:2:2)
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_set_pix_format: 0 - YUYV 4:2:2 (compressed : 0) (0x56595559)
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_do_set_pix_format: Testing palette YUYV (320x240)
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_do_set_pix_format: Using palette YUYV (320x240) bytesperlines 640 sizeimage 153600 colorspace 00000008
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_set_pix_format: Selected palette YUYV
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: found control 0x00980900, "Brightness", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: 	"Brightness", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: found control 0x00980901, "Contrast", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: 	"Contrast", default 32, current 32
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: found control 0x00980902, "Saturation", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: 	"Saturation", default 64, current 64
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: found control 0x00980903, "Hue", range -90,90 
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: 	"Hue", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: found control 0x00980918, "Power Line Frequency", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: 	"Power Line Frequency", default 0, current 0
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: found control 0x00980911, "Exposure", range 0,255 
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: 	"Exposure", default 120, current 120
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: found control 0x00980912, "Gain, Automatic", range 0,1 
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: 	"Gain, Automatic", default 1, current 1
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: found control 0x00980913, "Gain", range 0,63 
+[1:ml1] [NTC] [VID] [Nov 18 01:57:59] v4l2_scan_controls: 	"Gain", default 20, current 20
+[1:ml1] [NTC] [ALL] [Nov 18 01:58:00] image_ring_resize: Resizing pre_capture buffer to 1 items
+[1:ml1] [NTC] [STR] [Nov 18 01:58:00] http_bindsock: listening on any IPv4 address port 8081
+[1:ml1] [NTC] [ALL] [Nov 18 01:58:00] motion_init: Started motion-stream server on port 8081 (auth Disabled)
+[1:ml1] [NTC] [EVT] [Nov 18 01:58:11] event_newfile: File of type 8 saved to: /var/lib/motion/01-20201118015811.avi
+[1:ml1] [NTC] [ALL] [Nov 18 01:58:11] motion_detected: Motion detected - starting event 1
+[1:ml1] [NTC] [ALL] [Nov 18 01:58:19] mlp_actions: End of event 1
+[1:ml1] [NTC] [ALL] [Nov 18 01:58:19] motion_loop: Thread exiting
+[1:ml1] [NTC] [STR] [Nov 18 01:58:19] stream_stop: Closing motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [STR] [Nov 18 01:58:19] stream_stop: Closed motion-stream listen socket & active motion-stream sockets
+[1:ml1] [NTC] [VID] [Nov 18 01:58:19] vid_close: Cleaning up V4L2 device
+[1:ml1] [NTC] [VID] [Nov 18 01:58:19] v4l2_cleanup: Closing video device /dev/video0
+[0:motion] [NTC] [ALL] [Nov 18 01:58:20] main: Threads finished
+[0:motion] [NTC] [ALL] [Nov 18 01:58:21] main: Motion terminating
+[0:motion] [NTC] [ALL] [Nov 18 01:58:21] motion_remove_pid: Closing logfile (motion.log).

@@ -120,9 +120,10 @@ def startVideo():
 	subprocess.run((["motion", "-n"]) )
 	
 def startSound():
-	global sb
+	global sb, songOn
 	sound.playSong()
 	sb = "playButton"
+	songOn = False;
 
 def getTimeSince(initialTime):
 	if((time.time()-initialTime)>=3600):
