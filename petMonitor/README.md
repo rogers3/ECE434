@@ -33,16 +33,22 @@ in line 11 with your authentication token. Finally run ./install.sh on your bone
 
 ## Running the Pet Monitor: ##
 To run the pet monitor first ensure the installation steps have been completed. Then in this folder run:
-       bone$ ./setup.sh. 
+
+    bone$ ./setup.sh. 
+    
 This configures the pins and ngrok. Then run:
-       bone$ sudo ./httpMonitor.py
+
+    bone$ sudo ./httpMonitor.py
+    
 This should open the Pet Monitor on yourLocalHost:434 (read Installation for more info on yourLocalHost). From here the program is ran and the features of the Pet
 Monitor can be accessed
 
 ## Making Pet Monitor Publically accesable: ##
 If desired, the pet monitor can be made available on non-local hosts as well. This is done by first configuring ngrok (see Installation Instructions) and then in a 
 '''new''' terminal entering
-       bone$ ./ngrok http 434
+
+    bone$ ./ngrok http 434
+    
 Note: If using ngrok there will be two terminals connected to the Bone at once. One is running httpmoniter.py and the other is running ngrok.
 
 In the terminal running ngrok, a screen will appear with a public browser that can be used to view the pet monitor from anywhere. One issue with this is that
